@@ -1,0 +1,13 @@
+image: node:10.15.1-alpine
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+unit_test:
+  stage: test
+  script:
+    - npm test
