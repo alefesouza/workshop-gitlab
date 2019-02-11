@@ -1,7 +1,4 @@
-image: node:10.15.1-alpine
-
-before_script:
-  - npm install
+image: registry.gitlab.com/alefesouza/workshop-gitlab
 
 cache:
   paths:
