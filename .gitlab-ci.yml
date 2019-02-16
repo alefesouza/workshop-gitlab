@@ -1,10 +1,5 @@
 image: registry.gitlab.com/alefesouza/workshop-gitlab
 
-cache:
-  paths:
-    - node_modules/
-
 unit_test:
-  stage: test
   script:
-    - npm test
+    - jest
