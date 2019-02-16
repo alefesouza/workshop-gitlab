@@ -1,0 +1,434 @@
+
+<!DOCTYPE HTML>
+<html lang="pt-br" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Registry · GitLab: uma ferramenta para todo o ciclo DevOps</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../about/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escreva para pesquisar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/workshop-gitlab/tree/master" target="_blank" class="custom-link">Código final</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle" target="_blank" class="custom-link">Slides</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">GitLab: uma ferramenta para todo o ciclo DevOps</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../gitlab/">
+            
+                <a href="../gitlab/">
+            
+                    
+                    O GitLab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gitlab/vs-github.html">
+            
+                <a href="../gitlab/vs-github.html">
+            
+                    
+                    vs GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../gitlab/create-repository.html">
+            
+                <a href="../gitlab/create-repository.html">
+            
+                    
+                    Criar repositório
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../nodejs/">
+            
+                <a href="../nodejs/">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../nodejs/code.html">
+            
+                <a href="../nodejs/code.html">
+            
+                    
+                    Código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../nodejs/tests.html">
+            
+                <a href="../nodejs/tests.html">
+            
+                    
+                    Testes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ci/">
+            
+                <a href="../ci/">
+            
+                    
+                    CI/CD
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ci/gitlab.html">
+            
+                <a href="../ci/gitlab.html">
+            
+                    
+                    GitLab CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="registry.html">
+            
+                <a href="registry.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../about/">
+            
+                <a href="../about/">
+            
+                    
+                    Sobre o autor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado com GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Registry</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="docker-gitlab-registry">Docker: GitLab Registry</h1>
+<p>Geralmente enviamos nossas imagens Docker para o Docker Hub, basta voc&#xEA; criar um conta no mesmo e come&#xE7;ar a enviar suas imagens, por&#xE9;m ele possui um limite de imagens privadas no plano gratuito, uma boa alternativa para isso &#xE9; utilizar o GitLab Registry, um Docker Registry igual o Docker Hub por&#xE9;m integrado ao GitLab e ao seu reposit&#xF3;rio, dessa forma voc&#xEA; pode atingir outro n&#xED;vel de organiza&#xE7;&#xE3;o colocando sua infraestrutura junto com seu projeto, podendo tamb&#xE9;m utilizar sua pr&#xF3;pria imagem Docker privada no GitLab CI, para come&#xE7;armos, crie um arquivo chamado <em>Dockerfile</em> na raiz do seu projeto e coloque o c&#xF3;digo a seguir:</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> node:<span class="hljs-number">10.15</span>.<span class="hljs-number">1</span>-jessie
+
+<span class="hljs-keyword">RUN</span> <span class="bash">npm install -g jest
+</span></code></pre>
+<p>Esse &#xE9; o exemplo mais simples de um <em>Dockerfile</em>, voc&#xEA; pode ter mais informa&#xE7;&#xF5;es de como criar um mais complexo <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices" target="_blank">clicando aqui</a>.</p>
+<p>Nesse c&#xF3;digo dizemos que estamos criando uma nova imagem Docker a parte do imagem do Node.js vers&#xE3;o 10.15.1 rodando no Debian Jessie, e em seguida instalamos o <code>jest</code> globalmente para n&#xE3;o precisarmos utilizar o <code>npm install</code> na hora de testar nosso c&#xF3;digo, note que voc&#xEA; pode executar qualquer comando em bash ali que o sistema operacional na qual sua imagem se baseia, como ele &#xE9; baseado em um Debian, voc&#xEA; tamb&#xE9;m pode usar o <code>apt-get</code> normalmente com algumas poucas excess&#xF5;es, vale lembrar que o Docker tamb&#xE9;m &quot;roda meio que em um sandbox&quot; (sugiro pesquisar melhor sobre isso), dessa forma TODOS os comandos por padr&#xE3;o j&#xE1; s&#xE3;o executados como se tivessem um <code>sudo</code> antes.</p>
+<p>Caso j&#xE1; tenha conseguido instalar o Docker na sua m&#xE1;quina, rode o comando a seguir e fa&#xE7;a login com suas credenciais do GitLab:</p>
+<pre><code>docker login registry.gitlab.com
+</code></pre><p>Em seguida, rode o seguinte comando para &quot;buildar&quot; e enviar sua imagem Docker ao GitLab:</p>
+<pre><code>docker build -t registry.gitlab.com/{seu-username}/{seu-repositorio} .
+docker push registry.gitlab.com/{seu-username}/{seu-repositorio}
+</code></pre><p><img src="assets/1.png" alt="Imagem do GitLab Registry"></p>
+<p>Ap&#xF3;s isso, podemos enviar alterar nosso <em>.gitlab-ci.yml</em> para o c&#xF3;digo a seguir, j&#xE1; utilizando nossa imagem Docker:</p>
+<pre><code class="lang-yml"><span class="hljs-attr">image:</span> registry.gitlab.com/{seu-username}/{seu-repositorio}
+
+<span class="hljs-attr">unit_test:</span>
+<span class="hljs-attr">  script:</span>
+<span class="hljs-bullet">    -</span> jest
+</code></pre>
+<p>Note que n&#xE3;o precisamos rodar o <code>npm install</code> para rodar o <code>jest</code>, pois ele j&#xE1; est&#xE1; instalado globalmente na nossa imagem Docker logo tudo rodou normalmente.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../about/" class="navigation navigation-next " aria-label="Next page: Sobre o autor">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Registry","level":"1.5.1","depth":2,"next":{"title":"Sobre o autor","level":"1.6","depth":1,"path":"about/README.md","ref":"about/README.md","articles":[]},"previous":{"title":"Docker","level":"1.5","depth":1,"path":"docker/README.md","ref":"docker/README.md","articles":[{"title":"Registry","level":"1.5.1","depth":2,"path":"docker/registry.md","ref":"docker/registry.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab: uma ferramenta para todo o ciclo DevOps","language":"pt-br","links":{"sidebar":{"Código final":"https://github.com/alefesouza/workshop-gitlab/tree/master","Slides":"https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle"}},"gitbook":"*"},"file":{"path":"docker/registry.md","mtime":"2019-02-16T02:47:25.545Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-16T03:58:26.983Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

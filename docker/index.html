@@ -1,0 +1,420 @@
+
+<!DOCTYPE HTML>
+<html lang="pt-br" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Docker · GitLab: uma ferramenta para todo o ciclo DevOps</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="registry.html" />
+    
+    
+    <link rel="prev" href="../ci/gitlab.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escreva para pesquisar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/workshop-gitlab/tree/master" target="_blank" class="custom-link">Código final</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle" target="_blank" class="custom-link">Slides</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">GitLab: uma ferramenta para todo o ciclo DevOps</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../gitlab/">
+            
+                <a href="../gitlab/">
+            
+                    
+                    O GitLab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gitlab/vs-github.html">
+            
+                <a href="../gitlab/vs-github.html">
+            
+                    
+                    vs GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../gitlab/create-repository.html">
+            
+                <a href="../gitlab/create-repository.html">
+            
+                    
+                    Criar repositório
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../nodejs/">
+            
+                <a href="../nodejs/">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../nodejs/code.html">
+            
+                <a href="../nodejs/code.html">
+            
+                    
+                    Código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../nodejs/tests.html">
+            
+                <a href="../nodejs/tests.html">
+            
+                    
+                    Testes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ci/">
+            
+                <a href="../ci/">
+            
+                    
+                    CI/CD
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ci/gitlab.html">
+            
+                <a href="../ci/gitlab.html">
+            
+                    
+                    GitLab CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="registry.html">
+            
+                <a href="registry.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../about/">
+            
+                <a href="../about/">
+            
+                    
+                    Sobre o autor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado com GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="docker">Docker</h1>
+<p>O Docker &#xE9; uma programa escrito em Go que tem como fun&#xE7;&#xE3;o principal o &quot;virtualiza&#xE7;&#xE3;o a n&#xED;vel de sistema operacional&quot;
+ ou &quot;conteineriz&#xE3;o&quot;, recomendo pesquisar melhor sobre isso, mas explicando bem vagamente ele permite a voc&#xEA; subir &quot;mini sistemas operacionais&quot; dentro do seu sistema operacional, compartilhando o mesmo Kernel, geralmente o Kernel Linux.</p>
+<p>Dessa forma voc&#xEA; consegue criar imagens com um sistema operacional que utiliza o seu Kernel e instalar aplica&#xE7;&#xF5;es no mesmo de forma muito f&#xE1;cil, tudo sem &quot;sujar&quot; o seu espa&#xE7;o em disco, pois o Docker salva o mesmo em um lugar espec&#xED;fico do seu sistema operacional que basta apenas um comando para desinstalar.</p>
+<p>Existem v&#xE1;rias linguagens com imagens do Docker oficiais de linguagens de programa&#xE7;&#xE3;o, como <a href="https://hub.docker.com/_/node" target="_blank">Node.js</a>, <a href="https://hub.docker.com/_/php" target="_blank">PHP</a>, <a href="https://hub.docker.com/_/python" target="_blank">Python</a> e <a href="https://hub.docker.com/_/golang" target="_blank">Go</a>, que bastam apenas voc&#xEA; executar dois comandos (<code>docker pull imagem:versao</code> e <code>docker run image:versao</code>) para sair programando e executando a linguagem espec&#xED;fica.</p>
+<p>O mais legal de desenvolver no Docker &#xE9; que como voc&#xEA; vai estar desenvolvendo em um sistema operacional conteinerizado, dessa forma voc&#xEA; pode compartilhar exatamente o mesmo ambiente de desenvolvimento e produ&#xE7;&#xE3;o com outras pessoas, assim voc&#xEA; perde menos tempo procurando as depend&#xEA;ncias corretas do seu projeto e acaba com o problema do &quot;na minha m&#xE1;quina funciona&quot;.</p>
+<p>Como eu disse, o Docker &#xE9; bem mais complexo que isso e essa &#xE9; apenas a minha explica&#xE7;&#xE3;o de forma r&#xE1;pida, portanto sugiro voc&#xEA; pesquisar mais sobre Docker caso tenha tido interesse.</p>
+<p>H&#xE1; tamb&#xE9;m <a href="https://www.youtube.com/watch?v=hj038eSYs5A" target="_blank">essa palestra minha na Campus Party Bahia 3 em 2018</a> que eu falei um pouco sobre Docker e Docker Compose com PHP.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ci/gitlab.html" class="navigation navigation-prev " aria-label="Previous page: GitLab CI">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="registry.html" class="navigation navigation-next " aria-label="Next page: Registry">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Docker","level":"1.5","depth":1,"next":{"title":"Registry","level":"1.5.1","depth":2,"path":"docker/registry.md","ref":"docker/registry.md","articles":[]},"previous":{"title":"GitLab CI","level":"1.4.1","depth":2,"path":"ci/gitlab.md","ref":"ci/gitlab.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab: uma ferramenta para todo o ciclo DevOps","language":"pt-br","links":{"sidebar":{"Código final":"https://github.com/alefesouza/workshop-gitlab/tree/master","Slides":"https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle"}},"gitbook":"*"},"file":{"path":"docker/README.md","mtime":"2019-02-16T02:28:39.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-16T03:58:26.983Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
