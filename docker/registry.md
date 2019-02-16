@@ -1,6 +1,6 @@
-# Docker: GitLab Registry
+# Docker: GitLab Container Registry
 
-Geralmente enviamos nossas imagens Docker para o Docker Hub, basta você criar um conta no mesmo e começar a enviar suas imagens, porém ele possui um limite de imagens privadas no plano gratuito, uma boa alternativa para isso é utilizar o GitLab Registry, um Docker Registry igual o Docker Hub porém integrado ao GitLab e ao seu repositório, dessa forma você pode atingir outro nível de organização colocando sua infraestrutura junto com seu projeto, podendo também utilizar sua própria imagem Docker privada no GitLab CI, para começarmos, crie um arquivo chamado _Dockerfile_ na raiz do seu projeto e coloque o código a seguir:
+Geralmente enviamos nossas imagens Docker para o [Docker Hub](https://hub.docker.com/), basta você criar um conta no mesmo e começar a enviar suas imagens, porém ele possui um limite de imagens privadas no plano gratuito, uma boa alternativa para isso é utilizar o [GitLab Container Registry](https://docs.gitlab.com/ce/user/project/container_registry.html), um Docker Registry igual o Docker Hub porém integrado ao GitLab e ao seu repositório, dessa forma você pode atingir outro nível de organização colocando sua infraestrutura junto com seu projeto, podendo também utilizar sua própria imagem Docker privada no GitLab CI, para começarmos, crie um arquivo chamado _Dockerfile_ na raiz do seu projeto e coloque o código a seguir:
 
 ```dockerfile
 FROM node:10.15.1-jessie
@@ -37,4 +37,4 @@ unit_test:
     - jest
 ```
 
-Note que não precisamos rodar o `npm install` para rodar o `jest`, pois ele já está instalado globalmente na nossa imagem Docker logo tudo rodou normalmente.
+Note que não precisamos rodar o `npm install` para rodar o `jest`, pois ele já está instalado globalmente na nossa imagem Docker logo tudo roda normalmente.

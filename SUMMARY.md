@@ -12,5 +12,5 @@
 * [CI/CD](ci/README.md)
     * [GitLab CI](ci/gitlab.md)
 * [Docker](docker/README.md)
-    * [Registry](docker/registry.md)
+    * [GitLab Container Registry](docker/registry.md)
 * [Sobre o autor](about/README.md)
