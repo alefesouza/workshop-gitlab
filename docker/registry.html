@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Registry · GitLab: uma ferramenta para todo o ciclo DevOps</title>
+        <title>GitLab Container Registry · GitLab: uma ferramenta para todo o ciclo DevOps</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -259,7 +259,7 @@
                 <a href="registry.html">
             
                     
-                    Registry
+                    GitLab Container Registry
             
                 </a>
             
@@ -315,7 +315,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Registry</a>
+        <a href=".." >GitLab Container Registry</a>
     </h1>
 </div>
 
@@ -330,8 +330,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="docker-gitlab-registry">Docker: GitLab Registry</h1>
-<p>Geralmente enviamos nossas imagens Docker para o Docker Hub, basta voc&#xEA; criar um conta no mesmo e come&#xE7;ar a enviar suas imagens, por&#xE9;m ele possui um limite de imagens privadas no plano gratuito, uma boa alternativa para isso &#xE9; utilizar o GitLab Registry, um Docker Registry igual o Docker Hub por&#xE9;m integrado ao GitLab e ao seu reposit&#xF3;rio, dessa forma voc&#xEA; pode atingir outro n&#xED;vel de organiza&#xE7;&#xE3;o colocando sua infraestrutura junto com seu projeto, podendo tamb&#xE9;m utilizar sua pr&#xF3;pria imagem Docker privada no GitLab CI, para come&#xE7;armos, crie um arquivo chamado <em>Dockerfile</em> na raiz do seu projeto e coloque o c&#xF3;digo a seguir:</p>
+                                <h1 id="docker-gitlab-container-registry">Docker: GitLab Container Registry</h1>
+<p>Geralmente enviamos nossas imagens Docker para o <a href="https://hub.docker.com/" target="_blank">Docker Hub</a>, basta voc&#xEA; criar um conta no mesmo e come&#xE7;ar a enviar suas imagens, por&#xE9;m ele possui um limite de imagens privadas no plano gratuito, uma boa alternativa para isso &#xE9; utilizar o <a href="https://docs.gitlab.com/ce/user/project/container_registry.html" target="_blank">GitLab Container Registry</a>, um Docker Registry igual o Docker Hub por&#xE9;m integrado ao GitLab e ao seu reposit&#xF3;rio, dessa forma voc&#xEA; pode atingir outro n&#xED;vel de organiza&#xE7;&#xE3;o colocando sua infraestrutura junto com seu projeto, podendo tamb&#xE9;m utilizar sua pr&#xF3;pria imagem Docker privada no GitLab CI, para come&#xE7;armos, crie um arquivo chamado <em>Dockerfile</em> na raiz do seu projeto e coloque o c&#xF3;digo a seguir:</p>
 <pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> node:<span class="hljs-number">10.15</span>.<span class="hljs-number">1</span>-jessie
 
 <span class="hljs-keyword">RUN</span> <span class="bash">npm install -g jest
@@ -351,7 +351,7 @@ docker push registry.gitlab.com/{seu-username}/{seu-repositorio}
 <span class="hljs-attr">  script:</span>
 <span class="hljs-bullet">    -</span> jest
 </code></pre>
-<p>Note que n&#xE3;o precisamos rodar o <code>npm install</code> para rodar o <code>jest</code>, pois ele j&#xE1; est&#xE1; instalado globalmente na nossa imagem Docker logo tudo rodou normalmente.</p>
+<p>Note que n&#xE3;o precisamos rodar o <code>npm install</code> para rodar o <code>jest</code>, pois ele j&#xE1; est&#xE1; instalado globalmente na nossa imagem Docker logo tudo roda normalmente.</p>
 
                                 
                                 </section>
@@ -395,7 +395,7 @@ docker push registry.gitlab.com/{seu-username}/{seu-repositorio}
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Registry","level":"1.5.1","depth":2,"next":{"title":"Sobre o autor","level":"1.6","depth":1,"path":"about/README.md","ref":"about/README.md","articles":[]},"previous":{"title":"Docker","level":"1.5","depth":1,"path":"docker/README.md","ref":"docker/README.md","articles":[{"title":"Registry","level":"1.5.1","depth":2,"path":"docker/registry.md","ref":"docker/registry.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab: uma ferramenta para todo o ciclo DevOps","language":"pt-br","links":{"sidebar":{"Código final":"https://github.com/alefesouza/workshop-gitlab/tree/master","Slides":"https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle"}},"gitbook":"*"},"file":{"path":"docker/registry.md","mtime":"2019-02-16T02:47:25.545Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-16T03:58:26.983Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GitLab Container Registry","level":"1.5.1","depth":2,"next":{"title":"Sobre o autor","level":"1.6","depth":1,"path":"about/README.md","ref":"about/README.md","articles":[]},"previous":{"title":"Docker","level":"1.5","depth":1,"path":"docker/README.md","ref":"docker/README.md","articles":[{"title":"GitLab Container Registry","level":"1.5.1","depth":2,"path":"docker/registry.md","ref":"docker/registry.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab: uma ferramenta para todo o ciclo DevOps","language":"pt-br","links":{"sidebar":{"Código final":"https://github.com/alefesouza/workshop-gitlab/tree/master","Slides":"https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle"}},"gitbook":"*"},"file":{"path":"docker/registry.md","mtime":"2019-02-16T12:16:52.515Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-16T12:22:24.759Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
