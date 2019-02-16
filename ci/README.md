@@ -1,0 +1,7 @@
+# Continuous Integration
+
+O processo de Continuous Integration ou CI, explicando da forma mais simples, é basimente você configurar um servidor para executar seu código e ver se está tudo certo sempre que você enviar uma nova versão para o Git, assim garantindo que não está ocorrendo algum erro ao enviar para produção, ou até testar a cada pull request, você pode limitar a apenas permitir que alguém envie um código a você caso esteja sem erros conhecidos, existem várias alternativas de servidores de CI já prontos, como o [TravisCI](https://travis-ci.org/) e o [CircleCI](https://circleci.com/), que são muito comuns em projetos open-source hospedados no GitHub.
+
+Também é possível integrá-los ao GitLab, porém o mesmo já possui uma ferramenta própria e integrada para isso, o [GitLab CI](https://about.gitlab.com/product/continuous-integration/), com ele basta você subir um arquivo junto com seu projeto no Git e ele já estará pronto, na página a seguir aprenderemos como configurá-lo para testar nossa aplicação a cada commit.
+
+Há também o Continuous Deploy, que basicamente após passar pelo Continuous Integration e testar sua aplicação sem erros, você consegue iniciar outra instância apenas para fazer deploy da sua aplicação com o código do commit atual, a forma mais comum seria você adicionar uma chave SSH privada no GitLab e colocar os comando no seu arquivo do GitLab CI para acessar o seu servidor de produção via SSH e rodar o `git pull` seguido de outros comandos que você ache necessário.
