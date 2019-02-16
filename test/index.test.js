@@ -6,6 +6,10 @@ describe('Testes da função soma', () => {
         expect(file.soma(1, 2)).toBe(3);
     });
 
+    it('o resultado deve ser maior que 5', () => {
+        expect(file.soma(7, 8)).toBeGreaterThan(5);
+    });
+
 });
 
 describe('Testes da função subtrai', () => {
