@@ -335,8 +335,9 @@
 <p>Existem diversos tipos de testes, como os unit&#xE1;rios e de integra&#xE7;&#xE3;o.</p>
 <p>Em um processo de DevOps &#xE9; muito comum subir um container ou m&#xE1;quina virtual para testar nosso c&#xF3;digo a cada push no Git, dessa forma garantindo que n&#xE3;o estamos enviando c&#xF3;digo com erros conhecidos para o servidor.</p>
 <p>Existem diversas ferramentas de testes para JavaScript/Node.js, uma das mais famosas hoje em dia &#xE9; o <a href="https://jestjs.io/" target="_blank">Jest</a>, desenvolvido por uma equipe do Facebook com diversos contribuidores, para instalarmos o Jest no nosso projeto, rode o seguinte comando no Terminal:</p>
-<pre><code>npm install jest
-</code></pre><p>E ent&#xE3;o crie uma pasta chamada <em>tests</em> na raiz do seu projeto, em seguida crie um arquivo chamado <em>index.test.js</em>, e ent&#xE3;o cole o c&#xF3;digo a seguir:</p>
+<pre><code>npm install jest --save-dev
+</code></pre><p>Isso dir&#xE1; ao npm (gerenciador de pacotes que j&#xE1; vem instalado com o Node.js) para instalar o Jest no diret&#xF3;rio atual, criando a pasta <em>node_modules</em> que &#xE9; a padr&#xE3;o para depend&#xEA;ncias locais do Node.js. Utilizamos o <code>--save-dev</code> para indicar que usaremos essa depend&#xEA;ncia apenas no ambiente de desenvolvido, pois n&#xE3;o &#xE9; algo que usaremos apenas no processo de desenvolvimento e n&#xE3;o chegar&#xE1; ao nosso usu&#xE1;rio final.</p>
+<p>Em seguida crie uma pasta chamada <em>tests</em> na raiz do seu projeto, e ent&#xE3;o crie um arquivo chamado <em>index.test.js</em>, em seguida cole o c&#xF3;digo a seguir:</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// tests/index.test.js</span>
 
 <span class="hljs-keyword">const</span> file = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../src/index&apos;</span>);
@@ -368,6 +369,23 @@ describe(<span class="hljs-string">&apos;Testes da fun&#xE7;&#xE3;o subtrai&apos
 <p>Na maioria das linguagens de programa&#xE7;&#xE3;o a forma de escrever testes automatizados n&#xE3;o fogem muito dos m&#xE9;todos indicados acima, mudando apenas um pouco na nomenclatura ou sintaxe.</p>
 <p>Ao final, nossa estrutura de projeto ficar&#xE1; mais ou menos assim:</p>
 <p><img src="assets/1.png" alt="Imagem da estrutura de projeto"></p>
+<p>Para executar nossos testes com o Jest, mude o conte&#xFA;do da propriedade <code>&quot;test&quot;</code> dentro de <code>&quot;scripts&quot;</code> do arquivo <em>package.json</em> de <code>&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</code> para simplesmente &quot;jest&quot;, deixando ele mais ou menos assim:</p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;workshop-gitlab&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;jest&quot;</span>
+  },
+  <span class="hljs-string">&quot;keywords&quot;</span>: [],
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {    
+    <span class="hljs-string">&quot;jest&quot;</span>: <span class="hljs-string">&quot;^24.1.0&quot;</span>    
+  }
+}
+</code></pre>
 
                                 
                                 </section>
@@ -411,7 +429,7 @@ describe(<span class="hljs-string">&apos;Testes da fun&#xE7;&#xE3;o subtrai&apos
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Testes","level":"1.3.2","depth":2,"next":{"title":"CI/CD","level":"1.4","depth":1,"path":"ci/README.md","ref":"ci/README.md","articles":[{"title":"GitLab CI","level":"1.4.1","depth":2,"path":"ci/gitlab.md","ref":"ci/gitlab.md","articles":[]}]},"previous":{"title":"Código","level":"1.3.1","depth":2,"path":"nodejs/code.md","ref":"nodejs/code.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab: uma ferramenta para todo o ciclo DevOps","language":"pt-br","links":{"sidebar":{"Código final":"https://github.com/alefesouza/workshop-gitlab/tree/master","Slides":"https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle"}},"gitbook":"*"},"file":{"path":"nodejs/tests.md","mtime":"2019-02-16T12:08:02.783Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-16T12:22:24.759Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Testes","level":"1.3.2","depth":2,"next":{"title":"CI/CD","level":"1.4","depth":1,"path":"ci/README.md","ref":"ci/README.md","articles":[{"title":"GitLab CI","level":"1.4.1","depth":2,"path":"ci/gitlab.md","ref":"ci/gitlab.md","articles":[]}]},"previous":{"title":"Código","level":"1.3.1","depth":2,"path":"nodejs/code.md","ref":"nodejs/code.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab: uma ferramenta para todo o ciclo DevOps","language":"pt-br","links":{"sidebar":{"Código final":"https://github.com/alefesouza/workshop-gitlab/tree/master","Slides":"https://speakerdeck.com/alefesouza/gitlab-a-tool-for-the-entire-devops-lifecycle"}},"gitbook":"*"},"file":{"path":"nodejs/tests.md","mtime":"2019-02-16T15:51:12.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-16T15:54:54.921Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
