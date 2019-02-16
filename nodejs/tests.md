@@ -9,10 +9,12 @@ Em um processo de DevOps é muito comum subir um container ou máquina virtual p
 Existem diversas ferramentas de testes para JavaScript/Node.js, uma das mais famosas hoje em dia é o [Jest](https://jestjs.io/), desenvolvido por uma equipe do Facebook com diversos contribuidores, para instalarmos o Jest no nosso projeto, rode o seguinte comando no Terminal:
 
 ```
-npm install jest
+npm install jest --save-dev
 ```
 
-E então crie uma pasta chamada _tests_ na raiz do seu projeto, em seguida crie um arquivo chamado _index.test.js_, e então cole o código a seguir:
+Isso dirá ao npm (gerenciador de pacotes que já vem instalado com o Node.js) para instalar o Jest no diretório atual, criando a pasta _node_modules_ que é a padrão para dependências locais do Node.js. Utilizamos o `--save-dev` para indicar que usaremos essa dependência apenas no ambiente de desenvolvido, pois não é algo que usaremos apenas no processo de desenvolvimento e não chegará ao nosso usuário final.
+
+Em seguida crie uma pasta chamada _tests_ na raiz do seu projeto, e então crie um arquivo chamado _index.test.js_, em seguida cole o código a seguir:
 
 ```javascript
 // tests/index.test.js
@@ -49,3 +51,23 @@ Na maioria das linguagens de programação a forma de escrever testes automatiza
 Ao final, nossa estrutura de projeto ficará mais ou menos assim:
 
 ![Imagem da estrutura de projeto](./assets/1.png)
+
+Para executar nossos testes com o Jest, mude o conteúdo da propriedade `"test"` dentro de `"scripts"` do arquivo _package.json_ de `"echo \"Error: no test specified\" && exit 1"` para simplesmente "jest", deixando ele mais ou menos assim:
+
+```javascript
+{
+  "name": "workshop-gitlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {	
+    "jest": "^24.1.0"	
+  }
+}
+```

@@ -1,6 +1,6 @@
 # Node.js: Código
 
-Agora escreveremos um código bem simples, apenas para escrevermos testes em seguida e poder utilizar no GitLab CI, crie uma pasta chamada _src_, que é onde colocaremos todo o código-fonte escrito por nós para o projeto, e em seguida crie um arquivo chamado _index.js_ com o seguinte código:
+Agora escreveremos um código bem simples, apenas para escrevermos testes em seguida e poder utilizar no GitLab CI, na pasta gerada pelo `git clone` na última página, crie uma pasta chamada _src_, que é onde colocaremos todo o código-fonte escrito por nós para o projeto, e em seguida crie um arquivo chamado _index.js_ com o seguinte código:
 
 ```javascript
 // src/index.js
